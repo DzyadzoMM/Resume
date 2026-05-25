@@ -1,0 +1,237 @@
+:root {
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --border: #334155;
+    --badge-bg: #1e293b;
+    --badge-border: #475569;
+    --badge-text: #e2e8f0;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Header section */
+header {
+    text-align: center;
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+}
+
+h1 { 
+    font-size: 2.2rem; 
+    color: #ffffff; 
+    margin-bottom: 6px; 
+    text-transform: uppercase; 
+    letter-spacing: 0.5px; 
+}
+
+.subtitle { 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    color: var(--primary); 
+    letter-spacing: 1px; 
+    margin-bottom: 15px; 
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contacts a { 
+    color: var(--text-muted); 
+    text-decoration: none; 
+    transition: color 0.2s; 
+}
+
+.contacts a:hover { 
+    color: var(--primary); 
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+}
+
+.btn-download:hover { 
+    background-color: var(--primary-hover); 
+}
+
+/* Main Grid layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+section {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+p { 
+    color: var(--text-muted); 
+    font-size: 0.95rem; 
+}
+
+/* Project card styles */
+.project-item { 
+    margin-bottom: 20px; 
+}
+
+.project-item:last-child { 
+    margin-bottom: 0; 
+}
+
+.project-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline; 
+    flex-wrap: wrap; 
+}
+
+.project-title { 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    color: #ffffff; 
+}
+
+.project-url { 
+    font-size: 0.85rem; 
+    color: var(--primary); 
+    text-decoration: none; 
+}
+
+.project-url:hover { 
+    text-decoration: underline; 
+}
+
+.project-meta { 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    font-style: italic; 
+    margin-bottom: 6px; 
+}
+
+ul { 
+    margin-left: 20px;
+    color: var(--text-muted); 
+    font-size: 0.95rem; 
+    margin-top: 6px; 
+}
+
+li { 
+    margin-bottom: 4px; 
+}
+
+.separator {
+    border: 0; 
+    border-top: 1px solid var(--border); 
+    margin: 20px 0;
+}
+
+/* Skills badges */
+.skills-group { 
+    margin-bottom: 15px; 
+}
+
+.skills-group h3 { 
+    font-size: 0.9rem; 
+    color: #cbd5e1; 
+    margin-bottom: 6px; 
+    text-transform: uppercase; 
+}
+
+.badges { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 6px; 
+}
+
+.badge {
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--badge-border);
+}
+
+.edu-item { 
+    margin-bottom: 15px; 
+}
+
+.edu-title { 
+    font-weight: 700; 
+    color: #ffffff; 
+    font-size: 0.95rem; 
+}
+
+.edu-meta { 
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+/* Адаптивність для мобільних екранів */
+@media (max-width: 768px) {
+    .main-grid { 
+        grid-template-columns: 1fr; 
+    }
+    body { 
+        padding: 20px 10px; 
+    }
+}
